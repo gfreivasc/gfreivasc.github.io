@@ -14,6 +14,33 @@ Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit number
 
 Jekyll also offers powerful support for code snippets:
 
+```kotlin
+class Foo(
+  private val mode: String
+) {
+  private lateinit var compositeMode: List<String>
+
+  fun mangleMode(mangle: String): List<String> {
+    return if (compositeMode::isInitialized) {
+      compositeMode
+    } else {
+      list(mode, "$mangle_$mode").also { compositeMode = it }
+    }
+  }
+
+  companion object {
+    fun create(mode: String) = Foo(mode)
+  }
+}
+fun main(args: List<String>) {
+  val message = Foo(args.firstOrNull() ?: "world")
+    .mangleMode("Hello")
+    .last()
+    .replace("_", ", ")
+  println(message)
+}
+```
+
 {% highlight ruby %}
 def print_hi(name)
   puts "Hi, #{name}"
