@@ -28,7 +28,7 @@ twitter_username: the_gabrielfv
 github_username: gfreivasc
 
 # Build settings
-theme: minima
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
 plugins:
   - jekyll-feed
 
