@@ -21,16 +21,23 @@
 title: Gabriel Vasconcelos
 email: gabriel@gabrielfv.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Android guy that posts (mostly) android stuff.
+  A webpage of an android guy that posts (mostly) android stuff.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://gabrielfv.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gabrielfv.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: the_gabrielfv
 github_username: gfreivasc
+logo: "/assets/images/logo.jpg"
 
 # Build settings
 remote_theme: "mmistakes/jekyll-theme-basically-basic"
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: /page:num/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -51,3 +58,12 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      read_time: true
