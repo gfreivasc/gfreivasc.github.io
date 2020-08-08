@@ -19,7 +19,7 @@ A internet é uma fonte infindável de conteúdo. Tornou-se comum que desenvolve
 
 APIs, contudo, são limitadas. Além de depender da boa vontade da equipe de desenvolvimento para que haja uma API em primeiro lugar, também depende de ainda mais boa vontade para que ela esteja 100% atualizada (estilo bomba patch).
 
-Para tapar esse buraco, podemos fazer muita coisa. Uma das soluções que tem feito a cabeça da garotada nos verões mundo afora é o que chamamos de [*Web Scraping](https://en.wikipedia.org/wiki/Web_scraping)*. A técnica consiste simplesmente em fazer leitura do que está disposto na página e guardar de forma estruturada. Páginas costumam conter tudo o que gostaríamos de saber, inclusive dados que sequer são fornecidos por APIs*.
+Para tapar esse buraco, podemos fazer muita coisa. Uma das soluções que tem feito a cabeça da garotada nos verões mundo afora é o que chamamos de [*Web Scraping*](https://en.wikipedia.org/wiki/Web_scraping). A técnica consiste simplesmente em fazer leitura do que está disposto na página e guardar de forma estruturada. Páginas costumam conter tudo o que gostaríamos de saber, inclusive dados que sequer são fornecidos por APIs*.
 
 ### Ok, mas como eu faço isso?
 
