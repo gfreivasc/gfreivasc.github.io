@@ -41,25 +41,25 @@ Por último, obviamente, o [código fonte do PJSIP](https://trac.pjsip.org/repos
 
 ## Quais arquiteturas e versão usar?
 
-Será necessário especificar quais arquiteturas deverão ser utilizadas. A arquitetura armeabi era padrão até o Android KitKat (API 19), Posteriormente têm-se utilizado armeabi-v7a . Além dessas opções, há outras para arquiteturas MIPS e Intel, como o famoso x86 . Você pode optar por dar suporte a múltiplas arquiteturas.
+Será necessário especificar quais arquiteturas deverão ser utilizadas. A arquitetura `armeabi` era padrão até o Android KitKat (API 19), Posteriormente têm-se utilizado `armeabi-v7a`. Além dessas opções, há outras para arquiteturas MIPS e Intel, como o famoso `x86`. Você pode optar por dar suporte a múltiplas arquiteturas.
 
-Além disso é importante definir qual a versão mínima da API do Android a qual o app dará suporte. Você compilará o PJSUA2 pra essa versão, e a biblioteca será compatível com versões posteriores. É necessário que você escolha uma das opções disponíveis na pasta ndk_bundle/platforms que foi baixada junto com o NDK.
+Além disso é importante definir qual a versão mínima da API do Android a qual o app dará suporte. Você compilará o PJSUA2 pra essa versão, e a biblioteca será compatível com versões posteriores. É necessário que você escolha uma das opções disponíveis na pasta `ndk_bundle/platforms` que foi baixada junto com o NDK.
 
 Na minha versão local, as opções são da API 9 à 24, exceto as versões 10, 11 e 20. Como eu queria que funcionasse a partir da API 19, defini compilar a biblioteca com target sendo a API 19.
 
 ## Preparando a build
 
-Verifique se a header android_alarms.h está presente na pasta include/linux/ da versão e arquiteturas escolhidas. Precisamente em …/ndk_bundle/platforms/android-*/arch-*/. Por exemplo, pra API 19:
+Verifique se a header android_alarms.h está presente na pasta include/linux/ da versão e arquiteturas escolhidas. Precisamente em `…/ndk_bundle/platforms/android-*/arch-*/`. Por exemplo, pra API 19:
 
-* Para armeabi, armeabi-v7a, etc — android-19/arch-arm/include/linux
+* Para armeabi, armeabi-v7a, etc — `android-19/arch-arm/include/linux`
 
-* Para x86 e x86_64 — android-19/arch-x86/include/linux
+* Para x86 e x86_64 — `android-19/arch-x86/include/linux`
 
-* Para MIPS — android-19/arch-mips/include/linux
+* Para MIPS — `android-19/arch-mips/include/linux`
 
 Se você não encontrar, [baixe a original](https://android.googlesource.com/platform/external/kernel-headers/+/donut-release/original/linux/android_alarm.h) e cole nas pastas das arquiteturas escolhidas.
 
-Defina a variável de ambiente ANDROID_NDK_ROOT para a pasta da NDK. Se baixou pelo Android Studio, esta é a pasta ndk_bundle já mencionada.
+Defina a variável de ambiente `ANDROID_NDK_ROOT` para a pasta da NDK. Se baixou pelo Android Studio, esta é a pasta `ndk_bundle` já mencionada.
 
     $ export ANDROID_NDK_ROOT=…/ndk_bundle
 
@@ -93,17 +93,17 @@ Espere até terminar e depois vá na pasta pjsip-apps/src/swig para completar o 
     ...
     $ make clean
 
-Isso irá gerar tanto a .so do pjsua2 quanto as interfaces Java que irão se comunicar com ela. Porém a .so ficará na pasta destinada para a arquitetura armeabi ao invés da pasta para x86 , sendo necessário mover para a pasta correta. Ainda da pasta do swig rode:
+Isso irá gerar tanto a .so do pjsua2 quanto as interfaces Java que irão se comunicar com ela. Porém a .so ficará na pasta destinada para a arquitetura armeabi ao invés da pasta para x86, sendo necessário mover para a pasta correta. Ainda da pasta do swig rode:
 
     $ mv java/android/app/src/main/jniLibs/armeabi java/android/app/src/main/jniLibs/x86
 
-Repita todo o processo desde a configuração para cada arquitetura, deixando a armeabi por último. Quando compilar para armeabi , não será necessário mover nada.
+Repita todo o processo desde a configuração para cada arquitetura, deixando a armeabi por último. Quando compilar para armeabi, não será necessário mover nada.
 
 ## Usando os arquivos recém gerados no seu projeto
 
 Terminamos a compilação, mas agora precisamos saber como utilizar os arquivos compilados. Eles foram criados no exemplo que vem com o código, na pasta `<raiz-pjsip>/pjsip-apps/src/swig/java/android/`
 
-Copie todo o código do projeto no pacote org.pjsip.pjsua2 , exceto a pasta app , que contém o exemplo que não vamos precisar.
+Copie todo o código do projeto no pacote `org.pjsip.pjsua2`, exceto a pasta `app`, que contém o exemplo que não vamos precisar.
 
     $ cd MyApp/app/src/main/java
     $ cp -r …/pjsip-apps/src/swig/java/android/app/src/main/java/org/ .
