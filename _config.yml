@@ -28,8 +28,25 @@ twitter_username: the_gabrielfv
 github_username: gfreivasc
 logo: "/assets/images/logo.jpg"
 
+plainwhite:
+  name: Gabriel Vasconcelos
+  tagline: Android Developer
+  date_format: "%b %-d, %Y"
+
+  social_links:
+    twitter: the_gabrielfv
+    github: gfreivasc
+    linkedIn: in/gfreivasc
+
+  portfolio_image: "assets/images/logo.jpg"
+  search: true
+  dark_mode: true
+  html_lang: "en"
+
+  sitemap: true
+
 # Build settings
-remote_theme: "mmistakes/jekyll-theme-basically-basic"
+remote_theme: "samarsault/plainwhite-jekyll"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
