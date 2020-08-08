@@ -5,8 +5,6 @@ date: 2017-03-22 19:00:00+0300
 categories: android libraries pt-BR
 related_image: "https://cdn-images-1.medium.com/max/2000/1*WFGZgkF1HuA8vbzcpADNqA.jpeg"
 ---
-# VoIP PJSIP em seu app Android com PJSUA2
-
 Compilando e incluindo a API de VoIP PJSUA2 no seu projeto
 
 <figure class="align-center">
@@ -21,7 +19,7 @@ Vou complementar o guia oficial do [pjsip](https://trac.pjsip.org/repos/wiki/Get
 
 Este texto foi feito para compilar o PJSUA2 em sistemas UNIX.
 
-É interessante que você esteja trabalhando com o [*Android Studio](https://developer.android.com/studio/index.html?hl=pt-br)* a esse ponto do campeonato. Não vejo motivo para não estar. Vou considerar que esteja daqui para frente, por que é mais simples (para você).
+É interessante que você esteja trabalhando com o [Android Studio](https://developer.android.com/studio/index.html?hl=pt-br) a esse ponto do campeonato. Não vejo motivo para não estar. Vou considerar que esteja daqui para frente, por que é mais simples (para você).
 
 É necessário que você tenha baixado a NDK do Android na sua máquina, no mínimo na versão r8b. Você pode baixar pelo próprio Android Studio:
 
@@ -136,7 +134,7 @@ package com.me.myapp;
 
 import android.app.Application;
 
-public class MyApp extends Application { 
+public class MyApp extends Application {
     static {
         System.loadLibrary("pjsua2");
     }
