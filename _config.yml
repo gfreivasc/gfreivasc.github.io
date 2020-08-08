@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Gabriel Vasconcelos
+author: Gabriel Vasconcelos
 email: gabriel@gabrielfv.com
 description: >- # this means to ignore newlines until "baseurl:"
   A webpage of an android guy that posts (mostly) android stuff.
@@ -32,6 +33,9 @@ plainwhite:
   name: Gabriel Vasconcelos
   tagline: Android Developer
   date_format: "%b %-d, %Y"
+  sitemap: true
+  search: true
+  dark_mode: true
 
   social_links:
     twitter: the_gabrielfv
@@ -39,11 +43,7 @@ plainwhite:
     linkedIn: in/gfreivasc
 
   portfolio_image: "assets/images/logo.jpg"
-  search: true
-  dark_mode: true
   html_lang: "en"
-
-  sitemap: true
 
 # Build settings
 remote_theme: "samarsault/plainwhite-jekyll"
