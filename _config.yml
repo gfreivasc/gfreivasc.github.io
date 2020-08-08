@@ -28,6 +28,8 @@ url: "https://gabrielfv.com" # the base hostname & protocol for your site, e.g. 
 twitter_username: the_gabrielfv
 github_username: gfreivasc
 logo: "/assets/images/logo.jpg"
+disqus:
+  shortname: gabriel-fv
 
 plainwhite:
   name: Gabriel Vasconcelos
@@ -36,6 +38,7 @@ plainwhite:
   sitemap: true
   search: true
   dark_mode: true
+  disqus_shortname: gabriel-fv
 
   social_links:
     twitter: the_gabrielfv
