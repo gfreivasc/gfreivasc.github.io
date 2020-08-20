@@ -2,7 +2,7 @@
 layout: post
 title: "AAC ViewModel: an analysis"
 date: 2019-04-07 19:00:00+0300
-categories: android libraries en-US
+categories: android libraries en
 related_image: "https://cdn-images-1.medium.com/max/2000/1*bDKRj4IsrAE-iap3VNP9Qw.png"
 ---
 

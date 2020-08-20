@@ -2,7 +2,7 @@
 layout: post
 title: "Activities are not what you think  (part 1)"
 date: 2020-08-18 19:00:00+0300
-categories: android architecture en-US
+categories: android architecture en
 related_image: "/assets/images/stop-using-activities.png"
 ---
 
